@@ -1,0 +1,405 @@
+:root{
+    --blue: #1e549f;
+    --indigo: #695aa6;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #ec185d;
+    --orange: #ff6d02;
+    --yellow: #ffc107;
+    --green: #1bb74f;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #393e46;
+    --primary: #695aa6;
+    --secondary: #393e46;
+    --success: #1bb74f;
+    --info: #17a2b8;
+    --warning: #ff6d02;
+    --danger: #ec185d;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Open Sans",sans-serif;
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding:0%;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Junior Student', sans-serif;
+    font-size: 62.5%;
+}
+body{
+    width:122rem;
+    height: 100vh;
+
+    margin: 0 auto;
+    background-color: #d6d1d1;
+
+}
+/*NAVIGATION*/
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 122rem;
+    margin:0 auto;
+    padding-top: 3rem;
+    z-index: 1;
+    background: linear-gradient(90deg,#f9f9fb,#5d6399);
+color: var(--gray);
+    padding:2rem;
+  
+}
+
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+}
+.nav-icon{
+    width:30px;
+    height: 3px;
+    border-radius: 100rem;
+    background-color: var(--white);
+    position: relative;
+    margin-left: 1.5rem;
+}
+.nav-icon::before,
+.nav-icon::after{
+
+    content: "";
+    width:30px;
+    height: 3px;
+    border-radius: 100rem;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: inherit;
+
+}
+.nav-icon::before{
+    transform: translateY(-1rem);
+}
+.nav-icon::after{
+    transform: translateY(1rem);
+}
+#navbar ul{
+  list-style-type: none;
+}
+#navbar ul li{
+    display: inline-block;
+   
+}
+
+
+#profile-name{
+    color:inherit; 
+}
+.nav-link{
+    color:var(--white);
+    text-decoration:none;
+    padding: .75rem;
+    font-size: 2rem;
+}
+
+
+/*clear position fixed and floats*/
+.clear{
+    display: block;
+    height: 8rem;
+}
+.clear::after{
+    content:"";
+    clear:both;
+    display: table;
+}
+/*end*/
+main{
+    border: .5px solid #eee;
+
+    padding:8rem;
+    position: relative;
+    background-color: #eee;
+}
+#welcome-section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10rem;
+    padding-bottom: 8rem;
+    
+
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.welcome-section-content{
+    margin-right: 40rem;
+}
+
+.heading-primary{
+    font-size: 8rem;
+    font-weight:bolder;
+    color:var(--gray)
+}
+#profile-name{
+    font-family:  'Junior Student', sans-serif;
+   
+    font-weight: bold;
+    font-size: 30px;
+}
+.h1-span{
+    display: block;
+    font-weight: bold;
+}
+.heading-secondary{
+    font-family:var(--font-family-sans-serif);
+    text-transform: uppercase;
+    font-weight: normal;
+    color:var(--gray);
+    font-size: 3rem;
+    letter-spacing: 1px;
+
+}
+#profile-link{
+    display: inline-block;
+    background-color: var(--indigo);
+    color:var(--white);
+    text-decoration: none;
+    text-decoration: capitalize;
+    text-align: center;
+    padding: 15px;
+    width:20rem;
+    border-radius: 200px;
+    font-size: 1.5rem;
+    font-family: var(--font-family-sans-serif);
+    position: relative;
+    top:40px
+}
+
+/*ABOUT ME SECTION*/
+#aboutme{
+   height: 60vh;
+    padding-bottom: 8rem;
+  
+
+}
+
+.two-col{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-items: center;
+    column-gap: 8rem;
+    font-family: var(--font-family-sans-serif);
+    font-size: 2rem;
+    align-items: center;
+    
+
+}
+.long-text{
+    color: var(--dark);
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    line-height: 1.5;
+    padding:3rem 0;
+}
+.short-text{
+    font-family: var(--font-family-sans-serif);
+    color:var(--gray);
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    
+}
+.two-col-h{
+    font-weight: bold;
+    font-family: 'Junior Student', sans-serif;
+    color:var(--indigo);
+    margin-bottom: 2rem;
+}
+#projects{
+    margin-bottom: 10rem;
+}
+.btn-round{
+    display: inline-block;
+    font-family: var(--font-family-sans-serif);
+    text-decoration:none;
+    color:var(--purple);
+    border-radius: 200px;
+    border:1px solid var(--purple);
+    padding: 10px;
+    width:200px;
+    text-align: center;
+    margin-top:3rem;
+
+    text-transform: uppercase;
+}
+.btn-round:hover{
+    background-color: var(--purple);
+    color:#ffff;
+    text-transform: uppercase;
+}
+.grid{
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap:2rem;
+}
+.grid-item{
+    border:1px solid var(--gray);
+    border-radius: 5px;
+    padding: .5rem;
+
+}
+.grid-item img{
+    display: block;
+    width:100%;;
+    max-width: 400px;
+    height: auto;
+    object-fit:cover;
+}
+#pp{
+    display: inline-block;
+    width:200px;
+    max-width: 550px;
+    height: auto;
+    filter:drop-shadow(var(--indigo));
+    border-radius:50%;
+    
+    
+}
+.skills{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: inherit;
+    gap:2rem;
+    margin-bottom: 8rem;
+}
+.skill img{
+    width:120px;
+    max-width:100%;
+    object-fit: cover;
+    clip-path: circle(50%);
+    background-blend-mode: screen;
+
+}
+.p-m{
+ margin-bottom: 3rem;
+}
+.section-header{
+    text-align: center;
+    
+}
+.section-header h2{
+    font-family: 'Junior Student', sans-serif;
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--indigo);
+    color:#fff;
+    padding:4rem 2rem;
+    margin-bottom: 8rem;
+}
+.heading-primary-light{
+    font-size: 4rem;
+    color: #fff;
+}
+.short-text-light{
+    color:#fff;
+    font-size: 1.5rem;
+}
+.btn-box{
+    padding: 1.5rem;
+    border:0;
+    color: #000;
+    font-size: 3re;
+    font-weight:bold;
+    font-family: 'Junior Student', sans-serif;
+    letter-spacing: 3px;
+    border-radius: 5px;
+}
+.short-text.small{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+.skills-container{
+    padding-top:4rem;
+    padding-bottom: 4rem;
+}
+.short-text,.long-text{
+    font-family: var(--font-family-monospace);
+}
+#contact-me-form{
+    padding: 4rem;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+.inputs{
+    margin-bottom: 4rem;
+    margin-left: -40px;
+}
+
+label{
+    display: inline-block;
+  position: relative;
+  left: 50px;
+  transition: transform 1s;
+
+}
+.text-input{
+    padding: 10px;
+}
+
+.inputs:focus-within label{
+   
+    
+      transform: translateY(-40px);
+      
+}
+
+.l-grid{
+    width: 100%;
+    border-radius: 5px;
+    grid-column: 1/-1;
+}
+#description{
+    width:100%;
+    height:20rem;
+}
+.send-message{
+    border:1px solid var(--indigo);
+    color:var(--indigo);
+    background-color: transparent;
+    text-align: center;
+    width:150px;
+    padding:12px;
+    
+    justify-self: center;
+    border-radius: 5px;
+}
+.contact-me{
+    margin-bottom: 8rem;
+}
+
+@media only screen and (max-width:500px){
+    .body{
+        font-size: 80%;
+    }
+}
