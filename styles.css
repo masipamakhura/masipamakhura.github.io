@@ -1,6 +1,8 @@
 :root{
      --color-primary:#999999;
      --color-light-bg:#F6F6F6;
+     --color-light-gray:#7E7C7C;
+     --color-dark-gray:#6D6D6D;
      --color-black:#000;
      --color-pink:#FFE8E8;
     --breakpoint-xs: 400;
@@ -79,7 +81,7 @@ background-color: -var(--color-light-bg);
      z-index: 1000;
      
 }
-h1{
+.heading__primary{
     color: var(--color-primary);
     font-family: inherit;
     font-size: 10rem;
@@ -134,4 +136,67 @@ h1{
                  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
                  text-transform: uppercase;
     
+}
+#work{
+    margin-top:20rem;
+}
+.heading__container{
+    padding-left:10%;
+    margin-bottom: 8rem;;
+}
+.heading__secondary{
+    color: var(--color-primary);
+    font-family: inherit;
+    font-size: 7rem;
+    font-weight: 800;
+    font-style:normal;
+    
+    
+}
+.work__content{
+    margin-left: 10%;
+    font-size: 3rem;
+    color: var(--color-primary);
+    width: 85%;
+}
+.work__content h3{
+    color:var(--color-dark-gray) ;
+    font-weight:400;
+    margin-bottom: .5rem;
+}
+.work__content p{
+    color:var(--color-light-gray);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.col-1 p{
+    text-transform: uppercase;
+}
+.col-2 p{
+    margin-bottom: 1rem;
+}
+.two__col{
+    display: flex;
+    justify-content:space-between;
+}
+.col-item{
+    margin-bottom: 4rem;
+    
+}
+.cta__pill{
+    text-decoration: none;
+    border-radius: 100px;
+    padding:.75rem 3rem;
+    color:var(--color-black);
+    text-transform: capitalize;
+    background-color: var(--color-light-bg);
+    font-size: 1rem;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all .5s;
+}
+.cta__pill:hover{
+    background-color: orangered;
+    color: white;
+    font-size: 60%;
 }
