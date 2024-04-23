@@ -18,7 +18,7 @@ var toggleSideBar = ()=>{
                 }
             
 
-        })
+        });
     }
 }
 function clearForm(){
