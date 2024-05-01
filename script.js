@@ -1,41 +1,46 @@
-var toggleSideBar = ()=>{
-    var  clickCount = 1;
-    let icon = document.querySelector('.nav-icon');
-    let navbar = document.querySelector('#navbar');
-    if(icon !== undefined && icon !==null ){
-        console.log("icon is " + icon);
-        icon.parentElement.addEventListener('click',(ev)=>{
-            //ev.stopPropagation();
-           // ev.stopbubble();
-            if(clickCount %2 !== 0 ){
-           
-                    navbar.classList.add('open');
-                    clickCount++
-                
-            }else{
-                     navbar.classList.remove('open');
-                     clickCount++
-                }
-            
+function mPagination(){
 
-        });
+     
+    this.num = 4
+
+    this.pagination =  ()=>{
+
+        let totalProjects = document.querySelectorAll('.grid__item');
+        if(totalProjects.length > 0 && totalProjects !== null && totalProjects !== 'undefined'){
+          totalProjects = totalProjects.length;
+          return totalProjects;
+        }
+     },
+
+     this.increment = ()=>{
+        return ++this.num;
+    },
+
+    this.decrement = ()=>{
+        return --this.num;
     }
+
 }
-function clearForm(){
-    var inputs = document.querySelectorAll('form input');
-    var messageBox = document.querySelector('form textarea');
-    var copyElements = Array.from(inputs);
-    for(var i = 0; i < copyElements.length;i++){
-        copyElements[i].value = '';
-    }
-    messageBox.value = '';
-}
+
+
+
+
+
+
+
+
 window.addEventListener('load',()=>{
-    toggleSideBar();
-    document.querySelector('form').addEventListener('submit',()=>{
-        setTimeout(()=>{
-            clearForm();
-        },1000)
+
+    var nextBtn = document.querySelector('.btn_next');
+    var  prevBtn = document.querySelector('.btn_prev');
+    const m = new mPagination();
+    nextBtn.addEventListener('click',()=>{
+       console.log(m.increment());
+
     })
+    prevBtn.addEventListener('click',()=>{
+        console.log(m.decrement());
+    })
+
     
 })

@@ -27,6 +27,8 @@ html{
 body{
     background-color: var(--bg-color);
     color:var(--color-primary);
+    padding: 0 4rem;
+
 }
 .header{
     position: relative;
@@ -249,5 +251,18 @@ background-color: -var(--color-light-bg);
 }    
 #light-font{
     color:var(--color-primary);
-}       
+}  
+
+.counter__buttons{
+    display: flex;
+    justify-content: center;
+    padding:4rem;
+    gap:2rem;
+}
+.btn_counter{
+    padding:2rem;
+    border: none;
+    background-color: var(--color-pink);
+    
+}
 
