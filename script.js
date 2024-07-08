@@ -1,8 +1,6 @@
 function mPagination(){
 
-     
-    this.num = 4
-
+    this.num = 4;
     this.pagination =  ()=>{
 
         let totalProjects = document.querySelectorAll('.grid__item');
@@ -18,9 +16,9 @@ function mPagination(){
 
     this.decrement = ()=>{
         return --this.num;
-    }
+    },
 
-}
+};
 
 
 
@@ -37,10 +35,10 @@ window.addEventListener('load',()=>{
     nextBtn.addEventListener('click',()=>{
        console.log(m.increment());
 
-    })
+    });
     prevBtn.addEventListener('click',()=>{
         console.log(m.decrement());
-    })
+    });
 
     
-})
+});
